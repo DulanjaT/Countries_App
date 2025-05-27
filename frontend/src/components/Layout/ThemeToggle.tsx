@@ -1,8 +1,9 @@
 import { Box, Switch, Typography } from "@mui/material";
-import { useThemeContext } from "../../theme/themeContext";
+import { useThemeMode } from "../../theme/themeContext"; 
+
 
 export const ThemeToggle = () => {
-  const { mode, toggleColorMode } = useThemeContext();
+  const { mode, toggleMode } = useThemeMode();
 
   return (
     <Box display="flex" alignItems="center">
@@ -11,7 +12,7 @@ export const ThemeToggle = () => {
       </Typography>
       <Switch
         checked={mode === "dark"}
-        onChange={toggleColorMode}
+        onChange={toggleMode}
         color="default"
         inputProps={{ "aria-label": "toggle dark mode" }}
       />
