@@ -57,3 +57,6 @@ Thumbs.db
 # Project specific
 backend/dist/
 frontend/dist/
+
+# Local Netlify folder
+.netlify
