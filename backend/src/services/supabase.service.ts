@@ -9,6 +9,11 @@ export class SupabaseService {
   constructor(private configService: ConfigService) {
     const url = this.configService.get<string>('SUPABASE_URL');
     const key = this.configService.get<string>('SUPABASE_ANON_KEY');
+
+    if (!url || !key) {
+      throw new Error('SUPABASE_URL and SUPABASE_ANON_KEY must be defined in environment variables.');
+    }
+
     this._supabase = createClient(url, key);
   }
 
