@@ -44,8 +44,8 @@ The app is perfect for:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/octaveflow.git
-cd octaveflow
+git clone https://github.com/DulanjaT/Countries_App.git
+
 ```
 
 ### 2. Install dependencies
@@ -55,12 +55,19 @@ npm install
 
 ### 3. Environment Variables
 
-Create a `.env` file at the root and add:
+Create a `.env` on frontend folder and add:
 
 ```env
 VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
 VITE_OPENWEATHER_KEY=your-weather-api-key
+```
+Create a `.env` on backend folder and add:
+
+```env
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_ANON_KEY=your-anon-key
+
 ```
 
 > Replace the values with your actual Supabase and OpenWeather keys.
@@ -70,7 +77,7 @@ VITE_OPENWEATHER_KEY=your-weather-api-key
 npm run dev
 ```
 
-This will start the app at `http://localhost:5173`.
+This will start the app at `http://localhost:5180`.
 
 ### 5. Build for production
 ```bash
@@ -78,3 +85,15 @@ npm run build
 ```
 
 The production-ready app will be in the `dist/` folder.
+
+### Live App (FE)
+countriesappdulanja.netlify.app
+
+### Authors and acknowledgment
+
+Martin Holland
+
+GitHub @martin-holland
+
+
+

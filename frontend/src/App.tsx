@@ -18,14 +18,12 @@ import {
 
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import { ThemeProvider, useThemeMode } from "./theme/ThemeProvider";
-
 import { Login } from "./components/Auth/Login";
-
 import { CountriesList } from "./components/Countries/CountriesList";
 import { CountryDetail } from "./components/Countries/CountryDetail";
 import { FavoritesPage } from "./components/Favorites/FavoritesPage";
 
-// -------------------- Theme Toggle --------------------
+
 const ThemeToggle = () => {
   const { mode, toggleMode } = useThemeMode();
 
@@ -37,7 +35,7 @@ const ThemeToggle = () => {
   );
 };
 
-// -------------------- Protected Route --------------------
+
 const ProtectedRoute = ({ children }: { children: ReactNode }) => {
   const { user, loading } = useAuth();
   const location = useLocation();
@@ -48,7 +46,7 @@ const ProtectedRoute = ({ children }: { children: ReactNode }) => {
   return <>{children}</>;
 };
 
-// -------------------- Logout Button --------------------
+
 const LogoutButton = () => {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
@@ -67,7 +65,7 @@ const LogoutButton = () => {
   );
 };
 
-// -------------------- Home Page --------------------
+
 const HomePage = () => (
   <Box
     sx={{
@@ -92,7 +90,7 @@ const HomePage = () => (
   </Box>
 );
 
-// -------------------- App Content --------------------
+
 const AppContent = () => {
   const { user, loading } = useAuth();
 
