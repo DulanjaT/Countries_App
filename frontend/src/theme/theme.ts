@@ -1,7 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 
-export const theme = createTheme({
+export const lightTheme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
       main: '#1976d2',
       light: '#42a5f5',
@@ -23,34 +24,14 @@ export const theme = createTheme({
       'Arial',
       'sans-serif',
     ].join(','),
-    h1: {
-      fontSize: '2.5rem',
-      fontWeight: 600,
-    },
-    h2: {
-      fontSize: '2rem',
-      fontWeight: 600,
-    },
-    h3: {
-      fontSize: '1.75rem',
-      fontWeight: 600,
-    },
-    body1: {
-      fontSize: '1rem',
-      lineHeight: 1.5,
-    },
-    button: {
-      textTransform: 'none',
-    },
+    h1: { fontSize: '2.5rem', fontWeight: 600 },
+    h2: { fontSize: '2rem', fontWeight: 600 },
+    h3: { fontSize: '1.75rem', fontWeight: 600 },
+    body1: { fontSize: '1rem', lineHeight: 1.5 },
+    button: { textTransform: 'none' },
   },
   components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          borderRadius: 8,
-        },
-      },
-    },
+    MuiButton: { styleOverrides: { root: { borderRadius: 8 } } },
     MuiCard: {
       styleOverrides: {
         root: {
@@ -60,4 +41,20 @@ export const theme = createTheme({
       },
     },
   },
-}); 
+});
+
+export const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#90caf9',
+      light: '#e3f2fd',
+      dark: '#42a5f5',
+    },
+    secondary: {
+      main: '#ce93d8',
+      light: '#f3e5f5',
+      dark: '#ab47bc',
+    },
+  },
+});

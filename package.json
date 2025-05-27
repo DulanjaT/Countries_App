@@ -15,5 +15,9 @@
     },
     "devDependencies": {
         "concurrently": "^8.2.2"
+    },
+    "dependencies": {
+        "@nestjs/config": "^4.0.2",
+        "lottie-react": "^2.4.1"
     }
 }
